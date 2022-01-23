@@ -1,4 +1,4 @@
 plugins:
-  plugin_name_enabled:
+  snapshot_enabled:
     default: true
     client: true

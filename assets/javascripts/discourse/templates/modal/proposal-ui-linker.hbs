@@ -1,0 +1,23 @@
+{{#d-modal-body title="proposal.ui_linker.title" class="snapshot-ui-builder"}}
+
+  <div class="input-group snapshot-title">
+    <label class="input-group-label">{{i18n "proposal.ui_linker.proposal_id.label"}}</label>
+    {{input value=id}}
+  </div>
+
+{{/d-modal-body}}
+
+<div class="modal-footer">
+  {{d-button
+    action=(action "linkProposal")
+    icon="chart-bar"
+    class="btn-primary"
+    label="proposal.ui_linker.link"
+    disabled=disableInsert}}
+
+  {{d-button
+    label="cancel"
+    class="btn-flat"
+    action=(route-action "closeModal")
+  }}
+</div>

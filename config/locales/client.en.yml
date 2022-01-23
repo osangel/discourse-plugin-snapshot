@@ -1,4 +1,8 @@
 en:
   js:
-    discourse_plugin_name:
-      placeholder: placeholder
+    proposal:
+      ui_linker:
+        title: Link Proposal
+        proposal_id:
+          label: Proposal ID
+        link: Link

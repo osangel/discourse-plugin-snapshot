@@ -1,14 +1,17 @@
 # frozen_string_literal: true
 
-# name: discourse-plugin-name
-# about: TODO
+# name: snapshot
+# about: Discourse plugin for snapshot
 # version: 0.0.1
-# authors: Discourse
-# url: TODO
+# authors: misterplus
+# url: https://github.com/misterplus/discourse-plugin-snapshot
 # required_version: 2.7.0
 # transpile_js: true
 
-enabled_site_setting :plugin_name_enabled
+register_asset "stylesheets/common/snapshot-ui-builder.scss"
+register_asset "stylesheets/desktop/snapshot-ui-builder.scss", :desktop
+
+enabled_site_setting :snapshot_enabled
 
 after_initialize do
 end
