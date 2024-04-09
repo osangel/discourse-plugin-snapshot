@@ -1,0 +1,6 @@
+{
+  "name": "plugin-snapshot",
+  "component": true,
+  "about_url": "https://github.com/discourse/discourse-plugin-skeleton",
+  "license_url": "https://github.com/discourse/discourse-plugin-skeleton"
+}
