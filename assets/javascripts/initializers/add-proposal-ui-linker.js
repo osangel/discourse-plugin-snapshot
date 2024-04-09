@@ -9,7 +9,7 @@ function initializeProposalUILinker(api) {
       "siteSettings.snapshot_enabled"
     )
     canLinkProposal(snapshotEnabled) {
-      return (snapshotEnabled);
+      return true;
     },
 
     actions: {
