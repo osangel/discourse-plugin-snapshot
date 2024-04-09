@@ -1,6 +1,6 @@
 import discourseComputed from "discourse-common/utils/decorators";
 import showModal from "discourse/lib/show-modal";
-import { withPluginApi } from "discourse/lib/plugin-api";
+import { PLUGIN_API_VERSION,withPluginApi } from "discourse/lib/plugin-api";
 
 function initializeProposalUILinker(api) {
   api.modifyClass("controller:composer", {
@@ -9,7 +9,7 @@ function initializeProposalUILinker(api) {
       "siteSettings.snapshot_enabled"
     )
     canLinkProposal(snapshotEnabled) {
-      return true;
+      return true
     },
 
     actions: {
@@ -33,6 +33,6 @@ export default {
   name: "add-proposal-ui-linker",
 
   initialize() {
-    withPluginApi("0.8.7", initializeProposalUILinker);
+    withPluginApi(PLUGIN_API_VERSION, initializeProposalUILinker);
   },
 };
