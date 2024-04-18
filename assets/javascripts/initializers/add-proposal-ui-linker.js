@@ -24,7 +24,7 @@ function initializeProposalUILinker(api) {
       action: "showProposalLinker",
       icon: "far-eye-slash",
       label: "proposal.ui_linker.title",
-      condition: "canLinkProposal",
+      // condition: "canLinkProposal",
     };
   });
 }
