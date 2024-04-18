@@ -19,10 +19,10 @@ function initializeProposalUILinker(api) {
     },
   });
 
-  api.addComposerToolbarPopupMenuOption(() => {
+  api.addToolbarPopupMenuOptionsCallback(() => {
     return {
       action: "showProposalLinker",
-      icon: "chart-bar",
+      icon: "far-eye-slash",
       label: "proposal.ui_linker.title",
       condition: "canLinkProposal",
     };
