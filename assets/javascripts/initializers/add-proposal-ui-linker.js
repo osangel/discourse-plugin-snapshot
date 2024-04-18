@@ -33,6 +33,7 @@ export default {
   name: "add-proposal-ui-linker",
 
   initialize() {
+    console.log('init')
     withPluginApi(PLUGIN_API_VERSION, initializeProposalUILinker);
   },
 };
