@@ -19,7 +19,7 @@ function initializeProposalUILinker(api) {
     },
   });
 
-  api.addToolbarPopupMenuOptionsCallback(() => {
+  api.addComposerToolbarPopupMenuOption(() => {
     return {
       action: "showProposalLinker",
       icon: "chart-bar",
