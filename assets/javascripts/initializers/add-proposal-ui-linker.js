@@ -1,6 +1,6 @@
 import discourseComputed from "discourse-common/utils/decorators";
 import showModal from "discourse/lib/show-modal";
-import { PLUGIN_API_VERSION,withPluginApi } from "discourse/lib/plugin-api";
+import { withPluginApi } from "discourse/lib/plugin-api";
 
 function initializeProposalUILinker(api) {
   api.modifyClass("controller:composer", {
@@ -9,7 +9,7 @@ function initializeProposalUILinker(api) {
       "siteSettings.snapshot_enabled"
     )
     canLinkProposal(snapshotEnabled) {
-      return true
+      return (snapshotEnabled);
     },
 
     actions: {
@@ -22,9 +22,9 @@ function initializeProposalUILinker(api) {
   api.addToolbarPopupMenuOptionsCallback(() => {
     return {
       action: "showProposalLinker",
-      icon: "far-eye-slash",
+      icon: "chart-bar",
       label: "proposal.ui_linker.title",
-      // condition: "canLinkProposal",
+      condition: "canLinkProposal",
     };
   });
 }
@@ -33,7 +33,6 @@ export default {
   name: "add-proposal-ui-linker",
 
   initialize() {
-    console.log('init')
-    withPluginApi(PLUGIN_API_VERSION, initializeProposalUILinker);
+    withPluginApi("0.8.7", initializeProposalUILinker);
   },
 };
